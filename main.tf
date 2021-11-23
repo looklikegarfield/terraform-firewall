@@ -1,5 +1,5 @@
 resource "google_compute_firewall" "default" {
-  name    = "test-firewall"
+  name    = ""te-dev-fire-syst-firewall"
   network = google_compute_network.default.name
 
   allow {
@@ -15,7 +15,7 @@ resource "google_compute_firewall" "default" {
 }
 
 resource "google_compute_network" "default" {
-  name = "test-network"
+  name = "te-dev-vpce-syst-testvpc"
   project                 = "my-project-name"
   auto_create_subnetworks = true
   mtu                     = 1500
