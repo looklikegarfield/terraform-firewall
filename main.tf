@@ -1,5 +1,5 @@
 resource "google_compute_firewall" "default" {
-  name    = ""te-dev-fire-syst-firewall"
+  name    = "te-dev-fire-syst-firewall"
   network = google_compute_network.default.name
 
   allow {
