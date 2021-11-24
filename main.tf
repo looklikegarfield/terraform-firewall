@@ -17,7 +17,7 @@
 resource "google_compute_network" "default" {
   name = "te-dev-vpce-syst-testvpc"
   project                 = "my-project-name"
-  auto_create_subnetworks = true
+  auto_create_subnetworks = false
   mtu                     = 1500
 }
 
