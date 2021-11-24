@@ -31,7 +31,7 @@ module "firewall_rules" {
     description             = null
     direction               = "INGRESS"
     priority                = null
-    ranges                  = ["0.0.0.0/0"]
+    ranges                  = ["10.0.0.0/8"]
     source_tags             = null
     source_service_accounts = null
     target_tags             = null
