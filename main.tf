@@ -28,7 +28,7 @@ module "firewall_rules" {
   network_name = google_compute_network.testvpc.name
 
   rules = [{
-    name                    = "allow-ssh-ingress"
+    name                    = "te-dev-vpce-syst-ingress"
     description             = null
     direction               = "INGRESS"
     priority                = null
