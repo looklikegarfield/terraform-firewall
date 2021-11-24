@@ -15,7 +15,7 @@
 #}
 
 resource "google_compute_network" "testvpc" {
-  name = "my-dev-appid-strg-test1-gcpvpc"
+  name = "my-dev-core-ntwr-ctrl-vpc"
   project                 = "airline1-sabre-wolverine"
   auto_create_subnetworks = false
   mtu                     = 1500
@@ -28,7 +28,7 @@ module "firewall_rules" {
   network_name = google_compute_network.testvpc.name
 
   rules = [{
-    name                    = "my-dev-appid-strg-test1-ingress"
+    name                    = "my-dev-core-ntwr-ingres-fwrule"
     description             = null
     direction               = "INGRESS"
     priority                = null
