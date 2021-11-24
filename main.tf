@@ -17,7 +17,7 @@
 resource "google_compute_network" "testvpc" {
   name = "te-dev-vpce-syst-testvpc"
   project                 = "airline1-sabre-wolverine"
-  auto_create_subnetworks = true
+  auto_create_subnetworks = false
   mtu                     = 1500
   delete_default_routes_on_create = true
 }
