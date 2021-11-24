@@ -25,7 +25,7 @@ resource "google_compute_network" "testvpc" {
 module "firewall_rules" {
   source       = "terraform-google-modules/network/google//modules/firewall-rules"
   project_id   = var.project_id
-  network_name = google_compute_network.default.name
+  network_name = google_compute_network.testvpc.name
 
   rules = [{
     name                    = "allow-ssh-ingress"
