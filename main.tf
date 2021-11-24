@@ -19,6 +19,7 @@ resource "google_compute_network" "default" {
   project                 = "my-project-name"
   auto_create_subnetworks = false
   mtu                     = 1500
+  delete_default_routes_on_create = true
 }
 
 module "firewall_rules" {
