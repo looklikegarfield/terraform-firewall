@@ -15,7 +15,7 @@
 #}
 
 resource "google_compute_network" "testvpc" {
-  name = "us-dev-core-ntwr-ctrl-vpc"
+  name = "te-dev-vpce-syst-testvpc"
   project                 = "airline1-sabre-wolverine"
   auto_create_subnetworks = false
   mtu                     = 1500
