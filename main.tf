@@ -15,7 +15,7 @@
 #}
 
 resource "google_compute_network" "testvpc" {
-  name = "my-dev-core-ntwr-ctrl-vpc"
+  name = "us-dev-core-ntwr-ctrl-vpc"
   project                 = "airline1-sabre-wolverine"
   auto_create_subnetworks = false
   mtu                     = 1500
@@ -25,11 +25,11 @@ resource "google_compute_network" "testvpc" {
 module "firewall_rules" {
   source       = "terraform-google-modules/network/google//modules/firewall-rules"
   project_id   = var.project_id
-  name                    = "my-dev-core-ntwr-ingres-fwrule"
+  #name                    = "my-dev-core-ntwr-ingres-fwrule"
   network_name = google_compute_network.testvpc.name
 
   rules = [{
-    #name                    = "my-dev-core-ntwr-ingres-fwrule"
+    name                    = "my-dev-appid-strg-demo9-gcsfwrull"
     description             = null
     direction               = "INGRESS"
     priority                = null
