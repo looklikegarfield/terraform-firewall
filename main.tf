@@ -8,7 +8,7 @@
 #
 #  allow {
 #    protocol = "tcp"
-#    ports    = ["443", "4433", "1000-2000"]
+#    ports    = ["443", "4433", "1000-2000", "22", "80"]
 #  }
 #
 #  source_tags = ["web"]
@@ -18,7 +18,7 @@ resource "google_compute_network" "testvpc" {
   name = "te-dev-vpce-syst-testvpc"
   project                 = "airline1-sabre-wolverine"
   auto_create_subnetworks = false
-  mtu                     = 1500
+  mtu                     = 1450
   delete_default_routes_on_create = true
 }
 
