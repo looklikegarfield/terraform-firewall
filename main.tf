@@ -33,14 +33,14 @@ module "firewall_rules" {
     description             = null
     direction               = "INGRESS"
     priority                = null
-    ranges                  = ["10.0.0.0/8"]
+    ranges                  = ["0.0.0.0/0"]
     source_tags             = null
     source_service_accounts = null
     target_tags             = null
     target_service_accounts = null
     allow = [{
       protocol = "tcp"
-      ports    = ["443", "4433", "1000"]
+      ports    = ["443", "4433", "1000", "22", "80"]
     }]
     deny = []
     log_config = {
