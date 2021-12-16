@@ -8,7 +8,7 @@
 #
 #  allow {
 #    protocol = "tcp"
-#    ports    = ["443", "4433", "1000-2000", "22", "80"]
+#    ports    = ["443", "4433", "1000-2000"]
 #  }
 #
 #  source_tags = ["web"]
@@ -40,7 +40,7 @@ module "firewall_rules" {
     target_service_accounts = null
     allow = [{
       protocol = "tcp"
-      ports    = ["443", "4433", "1000", "22"]
+      ports    = ["443", "4433", "1000"]
     }]
     deny = []
     log_config = {
