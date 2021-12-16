@@ -15,10 +15,10 @@
 #}
 
 resource "google_compute_network" "testvpc" {
-  name = "te-dev-vpce-syst-testvpc"
+  name = "wf-us-nonprod-vpc-app01-res123"
   project                 = "airline1-sabre-wolverine"
   auto_create_subnetworks = false
-  mtu                     = 1450
+  mtu                     = 1500
   delete_default_routes_on_create = true
 }
 
@@ -29,18 +29,18 @@ module "firewall_rules" {
   network_name = google_compute_network.testvpc.name
 
   rules = [{
-    name                    = "my-dev-appid-strg-demo9-gcsfwrull"
+    name                    = "wf-us-nonprod-fw-app01-res123"
     description             = null
     direction               = "INGRESS"
     priority                = null
-    ranges                  = ["0.0.0.0/0"]
+    ranges                  = ["10.0.0.0/8"]
     source_tags             = null
     source_service_accounts = null
     target_tags             = null
     target_service_accounts = null
     allow = [{
       protocol = "tcp"
-      ports    = ["443", "4433", "1000", "22", "80"]
+      ports    = ["443", "4433", "1000", "22"]
     }]
     deny = []
     log_config = {
